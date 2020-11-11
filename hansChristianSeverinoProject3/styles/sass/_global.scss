@@ -20,15 +20,17 @@ img{
 }
 
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size:2rem;
 }
 
 h1,
-h2{
+h2,
+legend{
     font-family: 'Kaushan Script', cursive;
 }
 
 header div{
     display:flex;
+    flex-wrap:wrap;
 }

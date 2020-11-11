@@ -257,12 +257,13 @@ img {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 2rem;
 }
 
 h1,
-h2 {
+h2,
+legend {
   font-family: 'Kaushan Script', cursive;
 }
 
@@ -270,6 +271,8 @@ header div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 body {
@@ -277,7 +280,8 @@ body {
   color: #282828;
 }
 
-header {
+header,
+form {
   background-color: goldenrod;
 }
 
@@ -289,10 +293,60 @@ footer {
   background-color: #282828;
 }
 
+footer a {
+  color: #e2e2e2;
+}
+
+header {
+  height: 60vh;
+}
+
+header div {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
 h1 {
   font-size: 12rem;
+  margin: 0;
 }
 
 h2 {
   font-size: 7rem;
+}
+
+.mainTop {
+  width: 90%;
+  padding: 5rem 0 5rem 7rem;
+}
+
+.mainTop h2 {
+  text-align: center;
+}
+
+.mainTop p {
+  margin: 2rem 0;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  padding-left: 3rem;
+  line-height: 3rem;
+}
+
+legend {
+  font-size: 4rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+footer a {
+  text-decoration: none;
 }

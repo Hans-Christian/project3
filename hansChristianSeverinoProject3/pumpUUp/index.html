@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carpe Diem</title>
-    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto&display=swap" rel="stylesheet">
+    <title>Pump U Up!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/style.css">
     <style>
 
@@ -18,30 +18,60 @@
         </div>
     </header>
     <main class="wrapper">
-        <section>
+        <section class="mainTop">
             <h2>Useful Tips</h2>
             <p>Some important things that I learned through the years that I hope will work for you too:</p>
                 <ul>
+                    <li>Motivate yourself!</li>
+                    <li>Don't neglect your cardio.</li>
+                    <li>Drink lots of water throughout the day.</li>
                     <li>Have fun! Exercising should be an enjoyable activity.</li>
                     <li>Get plenty of sleep and rest often. <em>Avoid overtraining!</em></li>
-                    <li>Drink lots of water throughout the day.</li>
+                    <li>Choose compound exercises because they target more muscle groups.</li>
                     <li>Listen to your body. If you're sore or in pain, just take it easy until you recover.</li>
-                    <li>Every body is different. What works for one person may not work for you. So, try different workout routines and exercises to discover what you enjoy and what your body responds to best.</li>
-                    <li>Eat the right foods and eat often! This means getting your meat and veggies in, and anything else that is beneficial to your physical well-being. <em>Sorry, junk food doesn't make the cut!</em></li>
-                    <li>Consistency is key! As long as you're a dedicated student of fitness, you'll see and feel the changes that you want.</li>
-                    <li>Keep yourself motivated!</li>
-                    <li>Take cold showers <em>(I'm dead serious about this one)</em>. At least try it before you knock it!</li>
-                    <li>And, of course, don't forget your sweet sweet cardio!</li>
+                    <li>Take cold showers <em>(I'm serious about this one)</em>. At least try it before you knock it!</li>
+                    <li>Consistency is key! As long as you're a dedicated student of fitness, you'll see and feel positive changes.</li>
+                    <li>Eat the right foods and eat often! This means getting your meat and veggies in, and anything else that is beneficial to your well-being. <em>Sorry, junk food doesn't make the cut!</em></li>
+                    <li>And lastly, everybody is different. What works for one person may not work for you. So, try different workout routines and exercises to discover what you enjoy and what your body responds to best.</li>
                 </ul>
         </section>
 
-        <section>
-            
+        <section class="mainBot">
+            <form action="#">
+                <fieldset>
+                    <legend>Choose your muscle:</legend>
+
+                    <label for="chest">Chest</label>
+                    <input type="radio" name="muscle" value="chest" checked="true" id="chest">
+
+                    <label for="back">Back</label>
+                    <input type="radio" name="muscle" value="back" id="back">
+
+                    <label for="legs">Legs</label>
+                    <input type="radio" name="muscle" value="legs" id="legs">
+
+                    <label for="abs">Abs</label>
+                    <input type="radio" name="muscle" value="abs" id="abs">
+
+                    <label for="arms">Arms</label>
+                    <input type="radio" name="muscle" value="arms" id="arms">
+
+                    <label for="delts">Delts</label>
+                    <input type="radio" name="muscle" value="delts" id="delts">
+
+                    <div class="submit">
+                        <input type="submit" value="Get me an exercise!">
+                    </div>
+                </fieldset>
+            </form>
+            <div class="exercise"></div>
+            <div class="setsAndReps"></div>
+            <div class="tips"></div>
         </section>
     </main>
     <footer>
         <section class="wrapper">
-            <a href="https://junocollege.com/">Created at Juno College</a>
+            <a href="https://junocollege.com/">Created at Juno College 2020</a>
         </section>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
