@@ -1,12 +1,10 @@
-header{
-    height:60vh;
-}
-
 header div{
     justify-content:space-evenly;
+    min-height:60vh;
+    align-items:center;
 }
 
 h1{
-    font-size:12rem;
+    font-size:11rem;
     margin:0;
 }

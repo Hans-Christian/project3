@@ -297,18 +297,18 @@ footer a {
   color: #e2e2e2;
 }
 
-header {
-  height: 60vh;
-}
-
 header div {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  min-height: 60vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 h1 {
-  font-size: 12rem;
+  font-size: 11rem;
   margin: 0;
 }
 
@@ -316,8 +316,12 @@ h2 {
   font-size: 7rem;
 }
 
-.mainTop {
+.mainTop,
+fieldset {
   width: 90%;
+}
+
+.mainTop {
   padding: 5rem 0 5rem 7rem;
 }
 
@@ -338,8 +342,21 @@ ul li {
   line-height: 3rem;
 }
 
+form {
+  min-height: 55vh;
+  padding-top: 4rem;
+}
+
 legend {
   font-size: 4rem;
+}
+
+fieldset {
+  margin: 0 auto;
+}
+
+input[type="submit"] {
+  padding: 1.2rem 2rem;
 }
 
 footer {

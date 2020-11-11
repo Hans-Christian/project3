@@ -2,8 +2,12 @@ h2{
     font-size:7rem;
 }
 
-.mainTop{
+.mainTop,
+fieldset{
     width:90%;
+}
+
+.mainTop{
     padding:5rem 0 5rem 7rem;
 }
 
@@ -24,7 +28,20 @@ ul li{
     line-height:3rem;
 }
 
+form{
+    min-height:55vh;
+    padding-top:4rem;
+}
+
 legend{
     font-size:4rem;
+}
+
+fieldset{
+    margin:0 auto;
+}
+
+input[type="submit"]{
+    padding:1.2rem 2rem;
 }
 
