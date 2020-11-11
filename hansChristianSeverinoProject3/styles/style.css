@@ -256,6 +256,16 @@ img {
   display: block;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+}
+
+h1,
+h2 {
+  font-family: 'Kaushan Script', cursive;
+}
+
 header div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -277,4 +287,12 @@ main {
 
 footer {
   background-color: #282828;
+}
+
+h1 {
+  font-size: 12rem;
+}
+
+h2 {
+  font-size: 7rem;
 }
