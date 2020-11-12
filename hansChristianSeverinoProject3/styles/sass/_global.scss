@@ -10,6 +10,10 @@ html{
 .wrapper{
     max-width:1300px;
     width:93%;
+}
+
+.wrapper,
+fieldset{
     margin:0 auto;
 }
 
@@ -20,17 +24,19 @@ img{
 }
 
 body{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Slab', serif;
     font-size:2rem;
 }
 
 h1,
 h2,
-legend{
+legend,
+input[type="submit"]{
     font-family: 'Kaushan Script', cursive;
 }
 
-header div{
+header div,
+.choices{
     display:flex;
     flex-wrap:wrap;
 }

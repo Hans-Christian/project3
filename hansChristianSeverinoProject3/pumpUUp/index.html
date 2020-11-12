@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pump U Up!</title>
-    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto+Slab&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/style.css">
     <style>
 
@@ -19,20 +19,19 @@
     </header>
     <main class="wrapper">
         <section class="mainTop">
-            <h2>Useful Tips</h2>
-            <p>Some important things that I learned through the years that I hope will work for you too:</p>
+            <h2>Useful Tips:</h2>
                 <ul>
-                    <li>Motivate yourself!</li>
-                    <li>Don't neglect your cardio.</li>
-                    <li>Drink lots of water throughout the day.</li>
                     <li>Have fun! Exercising should be an enjoyable activity.</li>
+                    <li>Consistency is key! If you're a dedicated student of fitness, you'll see and feel positive changes.</li>
+                    <li>Eat the right foods! Get your meat and veggies in, and anything else that is beneficial to your health.</li>
                     <li>Get plenty of sleep and take your rest times seriously.</li>
                     <li>Choose compound exercises because they target more muscle groups.</li>
+                    <li>Don't neglect your cardio!</li>
                     <li>Listen to your body. If you're sore or in pain, just take it easy until you recover.</li>
+                    <li>Drink lots of water throughout the day.</li>
+                    <li>Motivate yourself, especially on days you're not feeling it.</li>
                     <li>Take cold showers <em>(I'm serious about this one! At least try it before you knock it)</em>.</li>
-                    <li>Consistency is key! As long as you're a dedicated student of fitness, you'll see and feel positive changes.</li>
-                    <li>Eat the right foods and eat often! This means getting your meat and veggies in, and anything else that is beneficial to your well-being <em>(sorry, junk food doesn't make the cut!)</em>.</li>
-                    <li>And lastly, everybody is different. What works for one person may not work for you. So, try different workout routines and exercises to discover what you enjoy and what your body responds to best.</li>
+                    <li>Try different workout routines and exercises to discover what you like and what your body responds to best.</li>
                 </ul>
         </section>
 
@@ -40,33 +39,38 @@
             <form action="#">
                 <fieldset>
                     <legend>Choose your muscle:</legend>
-
-                    <label for="chest">Chest</label>
-                    <input type="radio" name="muscle" value="chest" checked="true" id="chest">
-
-                    <label for="back">Back</label>
-                    <input type="radio" name="muscle" value="back" id="back">
-
-                    <label for="legs">Legs</label>
-                    <input type="radio" name="muscle" value="legs" id="legs">
-
-                    <label for="abs">Abs</label>
-                    <input type="radio" name="muscle" value="abs" id="abs">
-
-                    <label for="arms">Arms</label>
-                    <input type="radio" name="muscle" value="arms" id="arms">
-
-                    <label for="delts">Delts</label>
-                    <input type="radio" name="muscle" value="delts" id="delts">
-
+                    <div class="choices">
+                        <div>
+                            <label for="chest">Chest</label>
+                            <input type="radio" name="muscle" value="chest" checked="true" id="chest">
+                        </div>
+                        <div>
+                            <label for="back">Back</label>
+                            <input type="radio" name="muscle" value="back" id="back">
+                        </div>
+                        <div>
+                            <label for="legs">Legs</label>
+                            <input type="radio" name="muscle" value="legs" id="legs">
+                        </div>
+                        <div>
+                            <label for="abs">Abs</label>
+                            <input type="radio" name="muscle" value="abs" id="abs">
+                        </div>
+                        <div>
+                            <label for="arms">Arms</label>
+                            <input type="radio" name="muscle" value="arms" id="arms">
+                        </div>
+                        <div>
+                            <label for="delts">Delts</label>
+                            <input type="radio" name="muscle" value="delts" id="delts">
+                        </div>
+                    </div>
                     <div class="submit">
                         <input type="submit" value="Get me an exercise!">
                     </div>
                 </fieldset>
+                <div class="displayExercise"></div>
             </form>
-            <div class="exercise"></div>
-            <div class="setsAndReps"></div>
-            <div class="tips"></div>
         </section>
     </main>
     <footer>

@@ -11,37 +11,56 @@ fieldset{
     padding:5rem 0 5rem 7rem;
 }
 
-.mainTop h2{
+.mainTop h2,
+.submit,
+.displayExercise{
     text-align:center;
-}
-
-.mainTop p{
-    margin:2rem 0;
 }
 
 ul{
     list-style:none;
+    margin-top:2rem;
 }
 
 ul li{
-    padding-left:3rem;
-    line-height:3rem;
+    padding-left:1.7rem;
+    line-height:3.5rem;
+}
+
+li::before{
+    content:"\2022";
+    color:$primary;
+    font-weight:bold;
+    display:inline-block;
+    width:2.5rem;
+    margin-left:-2.1rem;
 }
 
 form{
-    min-height:55vh;
+    min-height:65vh;
     padding-top:4rem;
+}
+
+fieldset{
+    padding-bottom:3rem;
 }
 
 legend{
     font-size:4rem;
 }
 
-fieldset{
-    margin:0 auto;
+.choices{
+    justify-content: space-evenly;
+    margin:2.5rem 0;
 }
 
 input[type="submit"]{
-    padding:1.2rem 2rem;
+    padding:1.2rem 0;
+    width:50%;
+    font-size:2.7rem;
 }
 
+.displayExercise{
+    margin-top:3rem;
+    font-size:3rem;
+}
