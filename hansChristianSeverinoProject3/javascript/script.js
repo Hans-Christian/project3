@@ -9,10 +9,18 @@ workout.init = function(){
 
 workout.getExercise = function(){
     console.log(`Is this thing working?!`);
+    // Attach an event listener to the form that will execute a function once the input[type="submit"] is clicked.
+    $(`form`).on(`submit`, function(e){
+        // Prevent the default browser refresh with e.preventDefault().
+        e.preventDefault();
+        console.log(`You submitted the form!`);
+
+        const userSelection = $(`input[type="radio"]:checked`).val();
+        console.log(userSelection);
+
+    })
 }
 
-// Attach an event listener to the form that will execute a function once the input[type="submit"] is clicked.
-    // Prevent the default browser refresh with e.preventDefault().
     // Call randomizer exercise function, then assign the return value to a variable.
     // Display the return value to the specific div.
 
@@ -20,8 +28,6 @@ workout.getExercise = function(){
 
 // Initialize each option will be nested in an array inside of an object.
     // const exercises = [bodypart: `biceps`, "exercise name": `bicep curls`, sets: 4, reps: 10, instructions:...]
-
-// Use if/else statements. Will handle invalid inputs.
 
 // Based on the user's choice, create a function that will take in an argument from the user’s input which will generate a random exercise, along with reps, and sets.
 
