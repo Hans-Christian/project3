@@ -17,13 +17,19 @@ const exercises = [
     {bodypart:`delts`, exerciseName:`Dumbbell Shoulder Press`, sets:`3-4`, reps:`6-10`}, {bodypart:`delts`, exerciseName:`Side Lateral Raise`, sets:`3-4`, reps:6-12}, {bodypart:`delts`, exerciseName:`Wall Walk`, sets:`3-4`, reps:`to failure`},
 ]
 
-const filtered = exercises.filter(function(param){
-    return param.bodypart === `chest`;
-})
+// Create a function that will take in an argument from the user’s input which will return exercises related to the muscle the user selected.
+workout.getExercises = function(selectedMuscle){
+    console.log(`Onto the next step!`);
+    // console.log(exercises);
+    const filteredExercises = exercises.filter(function(exercise){
+        return exercise.bodypart === `${selectedMuscle}`;
+    })
+    console.log(filteredExercises);
 
-console.log(filtered);
+    
+}
 
-workout.getExercise = function(){
+workout.chosenMuscle = function(){
     console.log(`Is this thing working?!`);
     // Attach an event listener to the form that will execute a function once the input[type="submit"] is clicked.
     $(`form`).on(`submit`, function(e){
@@ -31,9 +37,13 @@ workout.getExercise = function(){
         e.preventDefault();
         console.log(`You submitted the form!`);
 
-        // Store whatever the user selects inside of a variable.
+        // The user will have to choose a body part they wish to exercise. For example, arms, legs, back, etc.
+            // Store whatever the user selects inside of a variable.
         const userSelection = $(`input[type="radio"]:checked`).val();
         console.log(userSelection);
+        
+        // Pass in userSelection as an argument.
+        workout.getExercises(userSelection);
     })
 }
 
@@ -42,19 +52,18 @@ workout.getExercise = function(){
     // Call randomizer exercise function, then assign the return value to a variable.
     // Display the return value to the specific div.
 
-// The user will have to choose a body part they wish to exercise. For example, arms, legs, back, etc.
-
-// Based on the user's choice, create a function that will take in an argument from the user’s input which will generate a random exercise, along with reps, and sets.
 
 // Filter exercises based on user selection.
 
 // Generate a random number using the Math.floor(), based on the exercise array.
     // Return exercise.
 
+
+    
 // Create an init function which will fire off the initial instructions.
 workout.init = function () {
     console.log(`Goodnight Moon!`);
-    workout.getExercise();
+    workout.chosenMuscle();
 }
 
 // Use $(function(){}).
