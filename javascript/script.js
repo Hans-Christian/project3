@@ -17,11 +17,17 @@ const exercises = [
     {bodypart:`delts`, exerciseName:`Dumbbell Shoulder Press`, sets:`3-4`, reps:`6-10`}, {bodypart:`delts`, exerciseName:`Side Lateral Raise`, sets:`3-4`, reps:6-12}, {bodypart:`delts`, exerciseName:`Wall Walk`, sets:`3-4`, reps:`to failure`},
 ]
 
+// Display the return value on the page.
+workout.displayExercise = function(generatedExercise){
+    console.log(`We're almost home! Keep going!`);
 
 
+    // $(`.displayExercise`).html(generatedExercise.exerciseName);
+
+}
 
 // Create a function that will take in an argument from the user’s input which will return exercises related to the muscle the user selected.
-workout.getExercises = function(selectedMuscle){
+workout.getExercise = function(selectedMuscle){
     console.log(`Onto the next step!`);
     // console.log(exercises);
 
@@ -31,10 +37,12 @@ workout.getExercises = function(selectedMuscle){
     })
     console.log(filteredExercises);
 
-    // Use Math.floor() to get a random exercise.
+    // Use Math.floor() to generate a random exercise.
+        // Store random exercise in variable.
     let randomExercise = filteredExercises[Math.floor(Math.random() * filteredExercises.length)];
     console.log(randomExercise);
 
+    workout.displayExercise(randomExercise);
 }
 
 workout.chosenMuscle = function(){
@@ -43,7 +51,7 @@ workout.chosenMuscle = function(){
     // Attach an event listener to the form that will execute a function once the input[type="submit"] is clicked.
     $(`form`).on(`submit`, function(e){
 
-        // Prevent the default browser refresh with e.preventDefault().
+        // Prevent browser refresh.
         e.preventDefault();
         console.log(`You submitted the form!`);
 
@@ -53,20 +61,17 @@ workout.chosenMuscle = function(){
         console.log(userSelection);
         
         // Pass in userSelection as an argument.
-        workout.getExercises(userSelection);
+        workout.getExercise(userSelection);
     })
 }
 
-    // Display the return value to the specific div.
-
-    
 // Create an init function which will fire off the initial instructions.
 workout.init = function () {
     console.log(`Goodnight Moon!`);
     workout.chosenMuscle();
 }
 
-// Use $(function(){}).
+// Check if page successfully loaded.
 $(function(){
 
     // Call init function.
