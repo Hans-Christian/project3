@@ -17,22 +17,32 @@ const exercises = [
     {bodypart:`delts`, exerciseName:`Dumbbell Shoulder Press`, sets:`3-4`, reps:`6-10`}, {bodypart:`delts`, exerciseName:`Side Lateral Raise`, sets:`3-4`, reps:6-12}, {bodypart:`delts`, exerciseName:`Wall Walk`, sets:`3-4`, reps:`to failure`},
 ]
 
+
+
+
 // Create a function that will take in an argument from the user’s input which will return exercises related to the muscle the user selected.
 workout.getExercises = function(selectedMuscle){
     console.log(`Onto the next step!`);
     // console.log(exercises);
+
+    // Filter exercises based on user selection.
     const filteredExercises = exercises.filter(function(exercise){
         return exercise.bodypart === `${selectedMuscle}`;
     })
     console.log(filteredExercises);
 
-    
+    // Use Math.floor() to get a random exercise.
+    let randomExercise = filteredExercises[Math.floor(Math.random() * filteredExercises.length)];
+    console.log(randomExercise);
+
 }
 
 workout.chosenMuscle = function(){
     console.log(`Is this thing working?!`);
+
     // Attach an event listener to the form that will execute a function once the input[type="submit"] is clicked.
     $(`form`).on(`submit`, function(e){
+
         // Prevent the default browser refresh with e.preventDefault().
         e.preventDefault();
         console.log(`You submitted the form!`);
@@ -47,17 +57,7 @@ workout.chosenMuscle = function(){
     })
 }
 
-
-
-    // Call randomizer exercise function, then assign the return value to a variable.
     // Display the return value to the specific div.
-
-
-// Filter exercises based on user selection.
-
-// Generate a random number using the Math.floor(), based on the exercise array.
-    // Return exercise.
-
 
     
 // Create an init function which will fire off the initial instructions.
@@ -68,6 +68,7 @@ workout.init = function () {
 
 // Use $(function(){}).
 $(function(){
+
     // Call init function.
     workout.init();
 })
