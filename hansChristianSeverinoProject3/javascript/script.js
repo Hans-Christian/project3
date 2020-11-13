@@ -1,7 +1,15 @@
-// Use $(function(){}).
-$(function(){
+// Create a namespace object.
+const workout = {};
 
-})
+// Create an init function which will fire off the initial instructions.
+workout.init = function(){
+    console.log(`Goodnight Moon!`);
+    workout.getExercise();
+}
+
+workout.getExercise = function(){
+    console.log(`Is this thing working?!`);
+}
 
 // Attach an event listener to the form that will execute a function once the input[type="submit"] is clicked.
     // Prevent the default browser refresh with e.preventDefault().
@@ -20,5 +28,13 @@ $(function(){
 // Filter exercises based on user selection.
 
 // Generate a random number using the Math.floor(), based on the exercise array.
+    // Return exercise.
 
-// Return exercise.
+// Use $(function(){}).
+$(function(){
+    // Call init function.
+    workout.init();
+})
+
+// Callback: is passed as an argument for another function. Has a variable name.
+// Anonymous: a function that does not have a name. Is only used once.
