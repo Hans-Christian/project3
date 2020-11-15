@@ -305,6 +305,10 @@ footer {
   background-color: #282828;
 }
 
+.displayOnPage a {
+  color: #282828;
+}
+
 footer a {
   color: #e2e2e2;
 }
@@ -391,12 +395,24 @@ input[type="submit"] {
 
 .displayExercise {
   margin-top: 3rem;
-  font-size: 2.7rem;
+  font-size: 2.5rem;
 }
 
 span {
   font-weight: bold;
-  padding: 0 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.video {
+  margin: 1.5rem 0 2rem 0;
+}
+
+.displayOnPage a {
+  padding: 0 1rem;
+}
+
+.recommendation {
+  font-size: 1.5rem;
 }
 
 footer {
@@ -411,4 +427,9 @@ footer a {
 footer a:hover,
 footer a:focus {
   color: goldenrod;
+}
+
+.displayOnPage a:hover,
+.displayOnPage a:focus {
+  background-color: teal;
 }

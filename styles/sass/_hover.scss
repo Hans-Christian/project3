@@ -2,3 +2,8 @@ footer a:hover,
 footer a:focus{
     color:$primary;
 }
+
+.displayOnPage a:hover,
+.displayOnPage a:focus{
+    background-color:$secondary;
+}
