@@ -292,10 +292,15 @@ form {
   background-color: goldenrod;
 }
 
+h1 {
+  color: goldenrod;
+}
+
 main {
   background-color: #e2e2e2;
 }
 
+h1,
 footer {
   background-color: #282828;
 }
@@ -317,6 +322,7 @@ header div {
 h1 {
   font-size: 11rem;
   margin: 0;
+  padding: 0 3.8rem 2.5rem 0;
 }
 
 h2 {
@@ -400,4 +406,9 @@ footer {
 
 footer a {
   text-decoration: none;
+}
+
+footer a:hover,
+footer a:focus {
+  color: goldenrod;
 }

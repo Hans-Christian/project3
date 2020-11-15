@@ -13,10 +13,15 @@ form{
     background-color:$primary;
 }
 
+h1{
+    color:$primary;
+}
+
 main{
     background-color:$white;
 }
 
+h1,
 footer{
     background-color:$black;
 }
