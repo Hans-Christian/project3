@@ -4,62 +4,54 @@ const workout = {};
 // Initialize each option will be nested in an array inside of an object.
     // const exercises = [bodypart: `biceps`, "exercise name": `bicep curls`, sets: 4, reps: 10, instructions:...]
 const exercises = [
-    {bodypart:`chest`, exerciseName:`Dumbbell Bench Press`, sets:`3-4`, reps:`6-10`}, {bodypart:`chest`, exerciseName:`Incline Dumbbell Press`, sets:`3-4`, reps:`6-10`}, {bodypart:`chest`, exerciseName:`Pushups`, sets:`3-4`, reps:`to failure`},
+    {bodypart:`chest`, exerciseName:`Dumbbell Bench Press`, sets:`3-4`, reps:`6-10 reps`}, {bodypart:`chest`, exerciseName:`Incline Dumbbell Press`, sets:`3-4`, reps:`6-10 reps`}, {bodypart:`chest`, exerciseName:`Pushups`, sets:`3-4`, reps:`as many as you can do`},
 
-    {bodypart:`back`, exerciseName:`Barbell Deadlift`, sets:`3-4`, reps:`6-10`}, {bodypart:`back`, exerciseName:`Chin-Ups`, sets:`3-4`, reps:`6-10`}, {bodypart:`back`, exerciseName:`Pullups`, sets:`3-4`, reps:`6-10`}, {bodypart:`back`, exerciseName:`Bent Over Barbell Row`, sets:`3-4`, reps:`6-10`},
+    {bodypart:`back`, exerciseName:`Barbell Deadlifts`, sets:`3-4`, reps:`6-10 reps`}, {bodypart:`back`, exerciseName:`Chin-Ups`, sets:`3-4`, reps:`6-10 reps`}, {bodypart:`back`, exerciseName:`Pullups`, sets:`3-4`, reps:`6-10 reps`}, {bodypart:`back`, exerciseName:`Bent Over Barbell Rows`, sets:`3-4`, reps:`6-10 reps`},
     
-    {bodypart:`legs`, exerciseName:`Dumbbell Squat`, sets:`3-4`, reps:`6-10`}, {bodypart:`legs`, exerciseName:`Bodyweight Squat`, sets:`3-4`, reps:`to failure`}, {bodypart:`legs`, exerciseName:`Dumbbell Lunges`, sets:`3-4`, reps:`8-12`},
+    {bodypart:`legs`, exerciseName:`Dumbbell Squats`, sets:`3-4`, reps:`6-10 reps`}, {bodypart:`legs`, exerciseName:`Bodyweight Squats`, sets:`3-4`, reps:`as many as you can do`}, {bodypart:`legs`, exerciseName:`Dumbbell Lunges`, sets:`3-4`, reps:`8-12 reps`},
     
-    {bodypart:`abs`, exerciseName:`V Sit-Ups`, sets:`3-4`, reps:`to failure`}, {bodypart:`abs`, exerciseName:`Mountain Climbers`, sets:`3-4`, reps:`to failure`}, {bodypart:`abs`, exerciseName:`Hanging Knee Raise`, sets:`3-4`, reps:`to failure`},
+    {bodypart:`abs`, exerciseName:`V Sit-Ups`, sets:`3-4`, reps:`as many as you can do`}, {bodypart:`abs`, exerciseName:`Mountain Climbers`, sets:`3-4`, reps:`as many as you can do`}, {bodypart:`abs`, exerciseName:`Hanging Knee Raises`, sets:`3-4`, reps:`as many as you can do`},
     
-    {bodypart:`arms`, exerciseName:`Dips (Triceps Version)`, sets:`3-4`, reps:`6-10`}, {bodypart:`arms`, exerciseName:`Diamond Pushups`, sets:`3-4`, reps:`to failure`}, {bodypart:`arms`, exerciseName:`Bench Dips`, sets:`3-4`, reps:`to failure`},
+    {bodypart:`arms`, exerciseName:`Dips (Triceps Version)`, sets:`3-4`, reps:`6-10 reps`}, {bodypart:`arms`, exerciseName:`Diamond Pushups`, sets:`3-4`, reps:`as many as you can do`}, {bodypart:`arms`, exerciseName:`Bench Dips`, sets:`3-4`, reps:`as many as you can do`},
     
-    {bodypart:`delts`, exerciseName:`Dumbbell Shoulder Press`, sets:`3-4`, reps:`6-10`}, {bodypart:`delts`, exerciseName:`Side Lateral Raise`, sets:`3-4`, reps:6-12}, {bodypart:`delts`, exerciseName:`Wall Walk`, sets:`3-4`, reps:`to failure`},
+    {bodypart:`delts`, exerciseName:`Dumbbell Shoulder Press`, sets:`3-4`, reps:`6-10 reps`}, {bodypart:`delts`, exerciseName:`Side Lateral Raises`, sets:`3-4`, reps:`6-12 reps`}, {bodypart:`delts`, exerciseName:`Wall Walks`, sets:`3-4`, reps:`as many as you can do`},
 ]
 
 // Display the return value on the page.
 workout.displayExercise = function(generatedExercise){
-    console.log(`We're almost home! Keep going!`);
 
-
-    // $(`.displayExercise`).html(generatedExercise.exerciseName);
-
+    const displayOnPage = `Do ${generatedExercise.sets} sets of: <span>${generatedExercise.exerciseName}</span> for ${generatedExercise.reps}.`
+    $(`.displayExercise`).html(displayOnPage);
 }
 
 // Create a function that will take in an argument from the user’s input which will return exercises related to the muscle the user selected.
 workout.getExercise = function(selectedMuscle){
-    console.log(`Onto the next step!`);
-    // console.log(exercises);
 
     // Filter exercises based on user selection.
     const filteredExercises = exercises.filter(function(exercise){
         return exercise.bodypart === `${selectedMuscle}`;
     })
-    console.log(filteredExercises);
 
     // Use Math.floor() to generate a random exercise.
         // Store random exercise in variable.
     let randomExercise = filteredExercises[Math.floor(Math.random() * filteredExercises.length)];
-    console.log(randomExercise);
 
+    // Pass in randomExercise as an argument.
     workout.displayExercise(randomExercise);
 }
 
 workout.chosenMuscle = function(){
-    console.log(`Is this thing working?!`);
 
     // Attach an event listener to the form that will execute a function once the input[type="submit"] is clicked.
     $(`form`).on(`submit`, function(e){
 
         // Prevent browser refresh.
         e.preventDefault();
-        console.log(`You submitted the form!`);
 
         // The user will have to choose a body part they wish to exercise. For example, arms, legs, back, etc.
             // Store whatever the user selects inside of a variable.
         const userSelection = $(`input[type="radio"]:checked`).val();
-        console.log(userSelection);
-        
+
         // Pass in userSelection as an argument.
         workout.getExercise(userSelection);
     })
@@ -67,7 +59,7 @@ workout.chosenMuscle = function(){
 
 // Create an init function which will fire off the initial instructions.
 workout.init = function () {
-    console.log(`Goodnight Moon!`);
+
     workout.chosenMuscle();
 }
 
@@ -77,6 +69,3 @@ $(function(){
     // Call init function.
     workout.init();
 })
-
-// Callback: is passed as an argument for another function. Has a variable name.
-// Anonymous: a function that does not have a name. Is only used once.
