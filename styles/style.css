@@ -334,7 +334,8 @@ h2 {
 }
 
 .mainTop,
-fieldset {
+fieldset,
+.displayExercise {
   width: 90%;
 }
 
@@ -394,7 +395,7 @@ input[type="submit"] {
 }
 
 .displayExercise {
-  margin-top: 3rem;
+  margin: 3rem auto;
   font-size: 2.5rem;
 }
 
@@ -432,4 +433,32 @@ footer a:focus {
 .displayOnPage a:hover,
 .displayOnPage a:focus {
   background-color: teal;
+}
+
+@media (max-width: 672px) {
+  html {
+    font-size: 52%;
+  }
+  .mainTop {
+    padding-left: 5rem;
+  }
+}
+
+@media (max-width: 562px) {
+  h1 {
+    text-align: center;
+  }
+  input[type="submit"] {
+    width: 70%;
+  }
+}
+
+@media (max-width: 460px) {
+  .mainTop {
+    padding-left: 3rem;
+  }
+  .choices {
+    width: 67.5%;
+    margin: 2.5rem auto;
+  }
 }

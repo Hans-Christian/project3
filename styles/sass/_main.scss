@@ -3,7 +3,8 @@ h2{
 }
 
 .mainTop,
-fieldset{
+fieldset,
+.displayExercise{
     width:90%;
 }
 
@@ -61,7 +62,7 @@ input[type="submit"]{
 }
 
 .displayExercise{
-    margin-top:3rem;
+    margin:3rem auto;
     font-size:2.5rem;
 }
 
